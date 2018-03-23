@@ -1,0 +1,155 @@
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="boxesandboats">
+
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Optimize mobile viewport -->
+
+	<title>Boxes&Boats</title>
+	<style type="text/css">
+		#mapContainer {
+			background-color: rgb(71, 110, 130);
+		}
+	</style>
+
+	<!-- SCROLLS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/node_modules/bulma/css/bulma.css">
+	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+
+	<link rel="stylesheet" href="style/style.css">
+
+	<!-- SPELLS -->
+	<script src="/node_modules/angular/angular.js"></script>
+	<script src="/node_modules/underscore/underscore.js"></script>
+	<script src="/node_modules/dateformat/lib/dateformat.js"></script>
+	<script src="js/controllers/taskController.js"></script>
+	<!-- Map -->
+	<script type="text/javascript" src="style/d3.min.js"></script>
+	<script type="text/javascript" src="style/topojson.min.js"></script>
+	<script type="text/javascript" src="style/datamaps.world.hires.min.js"></script>
+
+
+	<script src="js/controllers/mainController.js"></script>
+	<script src="js/services/tasks.js"></script>
+	<!-- load our todo service -->
+	<script src="js/core.js"></script>
+	<!-- load our main ap
+		plication -->
+	
+	<style type="text/css">
+		.pan rect {
+			fill: black;
+			opacity: 0.2;
+		}
+		.pan text {
+			fill: black;
+			font-size: 18px;
+			text-anchor: middle;
+		}
+		.pan:hover rect,
+		.pan:hover text {
+			fill: blue;
+		}
+	</style>
+
+</head>
+<!-- HEADER -->
+<nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation">
+	<div class="navbar-brand">
+		<a class="navbar-item">
+			<p>Boxes&Boats</p>
+		</a>
+
+		<button class="button navbar-burger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+	</div>
+</nav>
+
+
+
+<!-- SET THE CONTROLLER -->
+
+<body ng-controller="taskController">
+	<div id="mapContainer">
+	</div>
+	<div id="infoScreen" ng-hide="containerInfo === null">
+		<section id="containerInformation">
+			<div class="box">
+				<article class="media">
+					<div class="media-content">
+						<div class="content">
+							<h3>Container ID: {{ containerInfo.container_id }}<span class="closeCInfo" ng-click="resetContainerInfo()"><i class="fa fa-times-circle"></i></span></h3>
+							<table class="table is-striped is-fullwidth is-bordered">
+								<thead>
+									<tr>
+										<th>Key</th>
+										<th>Value</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Position</td>
+										<td>[{{containerInfo.longitude}}, {{ containerInfo.latitude }}]</td>
+									</tr>
+									<tr>
+										<td>Order #</td>
+										<td>The order number</td>
+									</tr>
+									<tr>
+										<td>Some random fact</td>
+										<td>Fact... fact... fact...</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</article>
+			</div>
+		</section>
+		<section id="containerLog">
+			<div class="box">
+				<table class="table is-striped is-fullwidth" id="logTable">
+					<thead>
+						<tr>
+							<th>Time</th>
+							<th>Position</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+		</section>
+	</div>
+	<!--<input class="slider is-fullwidth" step="1" min="0" max="100" value="50" type="range" orient="vertical">-->
+
+<footer class="footer is-fixed-bottom">
+	<div class="container">
+		<!--<div class="content has-text-centered">
+			<div class="columns">
+				<div class="column">
+					<a class="button is-light footer-button" ng-click="updateBubbles()">Move Bubbles</a>
+				</div>
+				<div class="column">
+					<a class="button is-light footer-button" ng-click="removeBubbles()">Remove Bubbles</a>
+				</div>
+				<div class="column">
+					<a class="button is-light footer-button" ng-click="myFunction()">Update</a>
+				</div>
+				<div class="column">
+					<a class="button is-light footer-button" ng-click="sendSlackMessage()">Slack Message</a>
+				</div>
+			</div>
+		</div>-->
+	</div>
+</footer>
+</body>
+</html>

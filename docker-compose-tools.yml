@@ -1,0 +1,19 @@
+version: '2'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile-tools
+    tty: true
+    image: "angularapp-express-tools"
+    container_name: "angularapp-express-tools"
+    ports:
+      - "3000:3000"
+      - "5858:5858"
+      - "27017:27017"
+    volumes:
+      - .:/app
+      - ./node_modules_linux:/app/node_modules
+    environment:
+      NODE_ENV: "development"
+      PORT: 3100

@@ -1,0 +1,157 @@
+#mapContainer{
+    width:100%;
+    margin: 0px;
+    min-height: 88vh;
+    max-height: 88vh;
+    position: fixed;
+    margin-top: 3.5rem;
+}
+#infoScreen{
+    min-height: 90vh;
+    max-height: 90vh;
+    position: fixed;
+    margin-top: 3rem;
+    right: 0px;
+    top: 0px;
+    width: 30vw;
+    background-color: #363636;
+    padding: 0.5rem;
+    padding-top: 0px;
+}
+.closeCInfo{
+    float: right;
+    cursor: pointer;
+}
+#containerInformation, #containerLog{
+    padding: 1rem;
+    padding-top: 0px;
+    height: 45vh;
+    overflow-y: scroll;
+}
+#containerLog{
+    border-top-width: 0px;
+}
+#containerLog .box{
+    padding: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 100%;
+}
+#containerInformation .box{
+    height: 100%;
+}
+#logTable{
+    height: 100%;
+}
+.footer-button{
+    width: 100%;
+    height: 100%;
+}
+circle:hover{
+    cursor: pointer;
+}
+.columns{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.slider.is-fullwidth{
+    position: fixed;
+    right: 10px;
+    bottom: 50%;
+    z-index: 1050;
+}
+
+
+
+footer{
+    height: 2rem;
+}
+.footer{
+    background-color: #363636;
+}
+#nav-tabs{
+    padding-top: 3.8rem;
+    padding-bottom: 0.7rem;
+}
+.nav-tab{
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 1.25rem 0;
+    position: relative;
+    color: #fff;
+    font-size: 22px;
+    background-color: #00d1b2;
+}
+.is-fixed-bottom{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    padding: 0.8rem 1.5rem 3rem;
+}
+#main-container{
+    margin: 0rem 3.5rem;
+    padding: 1.5rem 0.5rem;
+    border-radius: 3px;
+    background-color: #fff;
+    min-height: 79vh;
+    max-height: 80vh;
+}
+body {
+    font-family: 'Raleway';
+    background-color: whitesmoke; 
+    height: 100vh;
+    overflow-y: hidden;
+}
+#pageId{
+    height: 20%;
+}
+.kanban{
+    height: 80%;
+}
+.kanbanbox{
+    max-height: 400px;
+    overflow-y: scroll;
+}
+.panel{
+    font-size: 16px;;        
+}
+.panel.fullwidth{
+    width: 100%;
+}
+.button.is-primary.is-fullwidth{
+    border-radius: 0px 0px 3px 3px;
+    font-size: 18px;
+}
+#projectid-dropdown{
+    width: 16rem;
+}
+.dropdown-menu {
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    z-index: 1000;
+    width: 16rem;
+    max-height: 130px;
+    overflow-y: scroll;
+    box-shadow: none;
+    margin-bottom: 100px;
+}
+.dropdown-content{
+    background-color: whitesmoke;
+}
+a.dropdown-item:hover{
+    color: #fff;
+    background-color: grey;
+}
+.dropdown-menu.is-open {
+    display: block;
+}
+#modal-footer{
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+}
+.modal-content{
+    max-height: 880px;
+}
