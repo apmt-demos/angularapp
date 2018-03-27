@@ -2,6 +2,8 @@ FROM ibmcom/ibmnode
 
 WORKDIR "/app"
 
+COPY package*.json ./
+
 # Install app dependencies
 RUN apt-get update \
  && echo 'Finished installing dependencies'
